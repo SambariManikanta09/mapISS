@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISS location Mapping</title>
+    <style>
+      body {
+        background-color: black;
+        color: antiquewhite;
+        display: flex;
+        flex-direction: wrap;
+      }
+      #mapid {
+        height: 22rem;
+        width: 45rem;
+      }
+      .people {
+        padding: 9%;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="location">
+      <h1>International Space Station</h1>
+      <h2>Where Is ISS ?</h2>
+
+      <h3 id="lat"></h3>
+      <h3 id="long"></h3>
+      <div id="mapid"></div>
+    </div>
+    <div class="people">
+      <h1>
+        Say Hi, <br />to <span id="spacepeeps"></span> People <br />currently on
+        ISS
+      </h1>
+      <h3 id="astronames"></h3>
+    </div>
+    <script src="map.js"></script>
+    <script src="people.js"></script>
+  </body>
+</html>
